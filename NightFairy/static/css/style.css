@@ -1,0 +1,411 @@
+body{
+    background-color: #050306;
+}
+.content{
+    height: 400px;
+    margin-top: 153px;
+    margin-left: 300px;
+}
+.Cart{
+    width: max-content;
+    padding: 20px;
+    border-radius: 14px;
+    display: inline-table;
+    border: 8px solid;
+    background: #201e38;
+    margin-top: 161px;
+    margin-left: 313px;
+
+}
+.CartContent{
+    display: table;
+    margin-top: 22px;
+
+}
+.H1Cart{
+    font-size: 35px;
+}
+.comments{
+    margin-top: 160px;
+    margin-left: 320px;
+}
+
+.divTitle{
+    width: max-content;
+    float: left;
+}
+.divPriceNumber{
+    margin-left: 43px;
+    width: max-content;
+    float: left;
+}
+.bin_h1{
+
+    text-align: center;
+    font-size: 25.5px;
+    margin-top: 200px;
+    color: #FEFFBF;
+}
+
+#box{
+    width: 100px;
+    height: 80px;
+    top: 0;
+    right: 3px;
+    z-index: 3;
+    position: fixed;
+}
+.boxDesc{
+    top: 65px;
+    right: 52px;
+    z-index: 3;
+    position: fixed;
+}
+.stuffImg{
+    width: 100%;
+    height: 420px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.stuff{
+    border: 1px #F8DD00 solid;
+    height: auto;
+    width: 70%;
+
+    margin-top: 25px;
+}
+
+.link{
+
+    text-align: left;
+    width: 100%;
+    color: #FFF9C2;
+    font-size: 30px;
+    cursor: pointer;
+    background-color: #000000;
+
+
+}
+#divLinks{
+
+    width: 298px;
+    top: 150px;
+    position: fixed;
+    z-index: 1;
+
+
+}
+
+.stuffDescription{
+    color: #FEFFBF;
+}
+
+.comments{
+    margin-left: 20px;
+    border: #FEFFBF 1px solid;
+    width: max-content;
+
+}
+.ComIn{
+    margin-top: 3.5px;
+}
+
+.about{
+    border-color: #FFF9C0;
+    background-color: transparent;
+}
+*{
+    color: beige;
+    margin:0;
+}
+.option{
+    color: beige;
+}
+
+#head{
+    width: auto;
+    margin-left: 302px;
+    margin-top: 25px;
+}
+
+.img_cont{
+    height: 420px;
+    border-bottom: 0.5px #bf7110 solid;
+}
+.buyPutFrame{
+
+    height: 48px;
+
+    margin-left: 603px;
+    margin-top: 33px;
+}
+.PMBtn{
+    height: 26px;
+    width: 50px;
+    color: #FEFFBF;
+    background-color: transparent;
+    border: 2.5px #F1690E solid;
+    border-radius:6px;
+}
+.PriceBeforBTn{
+
+    height: 22px;
+
+}
+.PayBtn{
+    color: #FEFFBF;
+        background-color: transparent;
+        border: 2.5px #F1690E solid;
+        border-radius: 6px;
+        width: 129px;
+        height: 38px;
+        font-size: 22px;
+        float: right;
+}
+.PPLFrame{
+    margin-bottom: 10px;
+}
+.MinusBtn{
+    margin-left: 10px;
+}
+.buyBtn{
+    margin-left: 20px;
+    font-size: 25px;
+    border-radius: 2px;
+    color: #FEFFBF;
+    background-color: transparent;
+
+    border: 2.5px #F1690E solid;
+}
+.price{
+    color: #F1690E;
+    position: relative;
+
+}
+.price_on_stock{
+    color: #F1230E;
+    position: relative;
+    left: 50%;
+    top: -19px;
+    font-size: 19px;
+
+}
+.strike_price{
+    height: 3px;
+    color: red;
+    position: relative;
+
+}
+
+.prices_frame{
+    width: 253px;
+    height: 25px;
+
+}
+
+}
+.forText{
+    color: red;
+}
+.PriceAName{
+    padding-top: 20px;
+    margin-left: 1000px;
+
+}
+.DivPriceANameBuy{
+    z-index: 0;
+    position: absolute;
+    bottom: 550px;
+    right: 50px;
+}
+.head {
+    z-index: 1;
+    top: 0;
+    background-color:#090C1B;
+    position: fixed;
+    width: 100%;
+    height: 150px;
+
+}
+
+.head img{
+    height: 145px;
+    margin-left: 18px;
+    position: fixed;
+
+}
+
+.name{
+    font-family: Segoe-Print;
+    font-size: 60px;
+    color: #FEFFBF;
+    margin-top: -1%;
+    text-align: center;
+
+}
+.title{
+    height: 73%;
+}
+
+.tagline{
+    font-family: Segoe-Print;
+    font-size: 30px;
+    margin-left: 58%;
+    margin-top: -2%;
+    color: #89fb5a;
+}
+
+.menu{
+
+
+}
+
+.NavMess{
+    margin-left: 43%;
+}
+#main{
+
+}
+a{
+
+    color:#FBF9F4;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav{  
+    font-size: 30px;
+    color:#FBF9F4;
+    text-decoration: none;
+    float: left;
+    width: 27%;
+}
+
+
+#seals{
+    color: #F8DD00;
+
+}
+#messanger{
+
+
+    width: 1064px;
+    padding: 0;
+}
+#messanger a{
+
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+#telega{
+    color: #002AFF;
+}
+#wt{
+    color: #28FF19;
+}
+#viber{
+    color: #9D1EFF;
+}
+.stuff:hover{
+    border: 1px #D0CEB7 solid;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+}
+#seals:hover{
+    border-bottom: 2px solid #FBF9D0;
+}
+.mymeny:hover{
+    border-bottom: 2px solid #FFEA00;
+
+}
+
+@font-face {
+  font-family: 'Segoe-Print';
+  src:  url('../fonts/Segoe-Print.ttf') ;
+}
+@media screen and (max-width: 1412px ){
+    nav{
+        font-size: 24px;
+    }
+}
+@media screen and (max-width: 1340px){
+    .Cart{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 1185px ){
+    nav{
+        font-size: 18px;
+
+    }
+    #head{
+        margin-top: 20px;
+    }
+     .Cart{
+        font-size: 10px;
+    }
+    .PMBtn{
+        height: 25px;
+        width: 27px;
+    }
+    .PayBtn{
+        color: #FEFFBF;
+        background-color: transparent;
+        border: 2.5px #F1690E solid;
+        border-radius: 6px;
+        width: 129px;
+        height: 38px;
+        font-size: 22px;
+        float: right;
+
+    }
+}
+@media screen and (min-width: 1500px  ){
+    .stuff{
+        width: 40%;
+        margin-left: 18%;
+    }
+}
+@media screen and (max-width: 1488px  ){
+    .stuff{
+        width: 56%;
+        margin-left: 13%;
+    }
+}
+@media screen and (max-width: 1100px  ){
+    .stuff{
+        width: 70%;
+        margin-left: 8%;
+    }
+}
+@media screen and (max-width: 950px  ){
+    .stuff{
+        width: 82%;
+        margin-left: none;
+    }
+}
+
+

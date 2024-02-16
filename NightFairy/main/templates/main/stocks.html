@@ -1,0 +1,32 @@
+{% extends "layout/basic.html" %}
+{% load static %}
+{% block title %} Ночная Фея || Акции {% endblock %}
+{% block content %}
+	<div class = content>
+		{% for db in dbs %}
+			<div class="stuff">
+				<a href="{% url 'main:product' db.id %}" target="_blank">
+					<div class="img_cont">
+						<img class="stuffImg" src="{% static db.img_name %}">
+					</div>
+					<h2 class="stuffDescription">{{ db.title }}</h2>
+					<p class="stuffDescription">{{ db.content }}</p>
+					<p class="stuffDescription">Раздел: <i><a target = "_blank"  href="{% url 'main:by_rubric' db.rubric.pk %}">{{ db.rubric.name }}</a></i></p>
+					{% if db.on_stock %}
+
+						<div class="prices_frame">
+							<s class="strike_price"><p class = "price">Цена: {{ db.price }}р</p></s>
+							<p class = "price_on_stock" >{{ db.stock_price }}р</p>
+						</div>
+						
+						
+					{% else %}
+						<p class = "price">Цена: {{ db.price }}р</p>
+					{% endif %}
+				</a>
+						
+			</div>
+		{% endfor %}
+	</div>
+{% endblock %}
+		

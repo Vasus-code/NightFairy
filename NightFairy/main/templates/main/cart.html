@@ -1,0 +1,105 @@
+{% extends "layout/basic.html" %}
+{% load static %}
+{% block title %} Ночная Фея || Корзина {% endblock %}
+{% block content %}
+	<div class="Cart" id="content">
+		<h1 class="H1Cart" align="center">Корзина</h1>
+		<div class="CartContent">
+			{% if isCart %}
+				<div class="divTitle">
+					<h2>Название:</h2>
+					<br>
+					{% for i in title %}
+						<h2>{{i}}</h2>
+						<hr>
+					{% endfor %}
+
+				</div>
+				<div class="divPriceNumber">
+					<h2>Цена за шт:</h2>
+					<br>
+					{% for i in FPrice %}
+						<h2>{{i}}</h2>
+						<hr>
+					{% endfor %}
+
+				</div>
+
+				<div class="divPriceNumber">
+					<h2>Кол-во:</h2>
+					<br>
+					{% for i in number %}
+						<h2 class="PriceBeforBTn">{{i}}</h2>
+						<hr>
+					{% endfor %}
+				</div>
+				<div class="divPriceNumber">
+					<h1>Изменить:</h1>
+					<div style="margin-top: 14px; margin-left: -20px;">
+						{% for i in Id %}													
+							<h1></h1>
+							<form method="post" action="/main/product/{{ i }}/plus/" style="float: left;">
+								{% csrf_token %}
+								<input class="PMBtn " type="submit" name="{{ i }}" value="+">
+								<input type="hidden" name="plus" value="{{ i }}">
+								
+							</form>
+							<form method="post" action="/main/product/{{ i }}/minus/">
+								{% csrf_token %}
+								<input class="PMBtn MinusBtn" type="submit" name="{{ i }}" value="-">
+								<input type="hidden" name="minus" value="{{ i }}">
+
+								
+							</form>	
+							<hr>																		
+						{% endfor %}
+					</div>
+				</div>
+
+
+				<div class="divPriceNumber">
+					<h2>Цена:</h2>
+					<br>
+					{% for i in LPrice %}
+						<h2>{{i}}</h2>
+						<hr>
+					{% endfor %}
+
+				</div>
+				<div class="divPriceNumber">
+					<h2>Удалить:</h2>
+					<div style="    margin-top: 14px;">
+						{% for i in Id %}
+						<form method="post" action="/main/product/{{ i }}/del/">
+									{% csrf_token %}
+									<input class="PMBtn MinusBtn" type="submit" name="{{ i }}" value="X">
+									<input type="hidden" name="del" value="{{ i }}">			
+						</form>
+						<hr>
+						{% endfor %}
+					</div>
+					
+				</div>
+
+				
+				<div style="display: table-row;">
+					<h2 style="    font-size: 29px; float: left;" >Итого:</h2><h3 style="float: right; display: inline-block; font-size: 25px;" >{{ totalPrice }}р</h3>
+				</div>
+				<br>
+				<div>
+					<form method="post", action="/main/pay/">
+						{% csrf_token %}
+						<input type="submit" name="pay" class="PayBtn" value="Оплатить">
+						
+					</form>
+					
+				</div>
+				
+			{% else %}
+			
+				<h1>Корзина пуста</h1>
+			{% endif %}
+		</div>
+	</div>
+{% endblock %}
+		

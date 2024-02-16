@@ -1,0 +1,59 @@
+{% extends 'layout/basic.html' %}
+{% load static %}
+<!-- Создаю окна продоваемых вещей-->
+{% block title %} {{ db.title}} {% endblock %}
+{% block content %}
+	<div class = content id="content">
+
+		<div class="stuff"  >
+
+				<div class="img_cont">
+					<img class="stuffImg" src="{% static db.img_name %}">
+				</div>
+				<h2 class="stuffDescription" id = "product_title">{{ db.title }}</h2>
+				<h2 class="stuffDescription">Описание:</h2><p class="stuffDescription">{{ db.full_content }}</p>
+
+				<p class="stuffDescription">Раздел: <i><a target = "_blank"  href="{% url 'main:by_rubric' db.rubric.pk %}">{{ db.rubric.name }}</a></i></p>
+
+				{% if db.on_stock %}
+
+					<div class="prices_frame">
+						<s class="strike_price" ><p class = "price">Цена: {{ db.price }}р</p></s>
+						<p class = "price_on_stock" id="strike_price">{{ db.stock_price }}р</p>
+					</div>
+
+
+				{% else %}
+
+					<p class = "price" >Цена: <p class="price" id="price">{{ db.price }}р</p>
+				{% endif %}
+				<!--<input type="hidden" id ="product_desc" value="{{ db.content }}">
+				<input type="hidden" id ="number" value="0">  Не знаю зачем это вообще нужно, но вреде и без этого все работает -->
+
+
+
+		</div>
+		<div class="buyPutFrame">
+			<form method="post" action="/main/product/{{ db.id }}/addToCart/" >
+				{% csrf_token %}
+				<input type="submit" class = "buyBtn" id="addToBasket" value="Добавить в корзину" >
+				<br><br>
+			
+				<input type="hidden" name="product_id" value="{{ db.id }}">
+				<input id ="number" type="hidden" name="number" value="1">
+				<input type="button"id = "increaseNumber" style="margin-bottom: 10px; "class="buyBtn" value="&#708";><br>
+				<output  style="margin-left: 30px;" id="ong"  >1</output><br>
+				<input type="button"id = 'decreaseNumber' style="margin-top: 10px; ;"class="buyBtn" value="&#709";>
+
+
+
+			</form>
+
+		</div>
+
+
+	</div>
+
+{% endblock %}
+
+

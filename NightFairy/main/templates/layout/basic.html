@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>{% block title %}Ночная фея{% endblock %}</title>
+		<link rel="icon"  href="{% static 'src/LogoFairy.jpeg' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+	</head>
+	<body>
+
+		<!-- Шапка -->
+		<header class="head">
+			<!--Корзина-->
+			<a href="/main/cart/"><img id="box" alt="корзина" title="Корзина" src="{% static 'src/trollface.png' %}"></a>
+
+			<!-- Лого и название -->
+			<img src="{% static 'src/ColorNightFairy.png' %}" alt="Logo">
+			<div class="title">
+				<h1 class="name">Ночная фея</h1>
+				<h1 class="tagline">Не купишь - отсосешь</h1>
+			</div>
+			
+			<div id="head">
+				<!-- Главное меню и тп -->
+				<nav class="menu">						
+					<a target="_blank"class="mymeny" id="main" href="{% url 'main:index' %}">главная</a>
+					<a target="_blank"id="seals" class="mymeny" href="{% url 'main:stocks' %}">акции</a>
+					<a target="_blank"class="mymeny" href="{% url 'main:about_us' %}">о нас</a>
+				</nav>
+				<!-- Как с нами связатся-->
+				<nav class="NavMess">
+					<a target="_blank"id="telega" title="Должен быть установлен Telegram для ПК или телефона"class="messanger" href="https://t.me/Basiiil_b">telegram </a>
+					<a target="_blank"id="viber" title="Должен быть установлен Viber для ПК или для телефона" class="messanger" href="viber://chat?number=79170277769">viber </a>
+					<a target="_blank"id="wt" title="Должен быть установлен WhatsApp для ПК или для телефона" class="messanger" href="https://wa.me/79170277769">whatsapp </a>
+				</nav>
+			</div>
+			<div id="divLinks">
+			{% for rubric in rubrics %}
+				{% if current_rubric.name == rubric.name %}
+
+					<a target="_blank"  href="/main/{{ rubric.pk }}"><button style="background-color: #BF7110 "  class="link">{{ rubric.name }}</button></a>
+					
+				{% else %}
+					<a target="_blank"  href="/main/{{ rubric.pk }}"><button style="background-color: #000000 "  class="link">{{ rubric.name }}</button></a>
+					
+				{% endif %}
+			{% endfor %}
+		</div>
+		</header>
+
+
+		<section>
+		<!-- Создаю окна продоваемых вещей-->
+			{% block content %}
+			{% endblock %}
+		</section>
+		
+		<script src="{% static 'js/script.js' %}"></script>
+	</body>
+</html>
